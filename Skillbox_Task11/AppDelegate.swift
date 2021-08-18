@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Skillbox_Task11
-//
-//  Created by Мария on 10.08.2021.
-//
-
 import UIKit
 
 @main

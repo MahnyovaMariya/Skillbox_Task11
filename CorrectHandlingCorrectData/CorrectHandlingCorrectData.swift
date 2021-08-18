@@ -39,4 +39,8 @@ class CorrectHandlingCorrectData: XCTestCase {
             }
         }
     }
+    
+    func firstCorrectHandling() {
+        
+    }
 }

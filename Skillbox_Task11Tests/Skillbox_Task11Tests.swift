@@ -1,26 +1,23 @@
-//
-//  Skillbox_Task11Tests.swift
-//  Skillbox_Task11Tests
-//
-//  Created by Мария on 10.08.2021.
-//
-
 import XCTest
 @testable import Skillbox_Task11
 
 class Skillbox_Task11Tests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    override func setUpWithError() throws { }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    override func tearDownWithError() throws { }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        XCTAssert(ViewController().checkLogInField(text: "firstCheck@m ail.ru") == "Not a valid email" )
+        XCTAssert(ViewController().checkLogInField(text: "secondCheck@mail") == "Not a valid email" )
+        XCTAssert(ViewController().checkLogInField(text: "thirdCheckmail.ru") == "Not a valid email" )
+        XCTAssert(ViewController().checkLogInField(text: "fourthCheck@mail.ru") == "" )
+        XCTAssert(ViewController().checkPasswordField(text: "jk7L,") == "Not a valid password" )
+        XCTAssert(ViewController().checkPasswordField(text: "jk7L,M") == "" )
+        XCTAssert(ViewController().checkPasswordField(text: "jkkljHV") == "Not a valid password" )
+        XCTAssert(ViewController().checkPasswordField(text: "jk7907") == "Not a valid password" )
+        XCTAssert(ViewController().checkPasswordField(text: "7L,555FR") == "Not a valid password" )
     }
 
     func testPerformanceExample() throws {
@@ -29,5 +26,4 @@ class Skillbox_Task11Tests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
